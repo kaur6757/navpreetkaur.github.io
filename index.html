@@ -1,0 +1,274 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Navpreet Kaur | Web Design Portfolio</title>
+  <style>
+    :root{
+      --bg:#0b0d10;
+      --panel:#0f1217;
+      --text:#f3f5f7;
+      --muted:#a9b0bb;
+      --line:rgba(255,255,255,.08);
+      --accent:#1475DC; /* BlackBerry Blue */
+      --shadow: 0 10px 30px rgba(0,0,0,.35);
+      --radius: 16px;
+    }
+    *{box-sizing:border-box}
+    body{
+      margin:0;
+      font-family: ui-sans-serif, system-ui, -apple-system, Segoe UI, Roboto, Arial, "Apple Color Emoji","Segoe UI Emoji";
+      background: radial-gradient(1200px 600px at 20% 0%, rgba(20,117,220,.18), transparent 50%),
+                  radial-gradient(900px 500px at 90% 20%, rgba(20,117,220,.10), transparent 55%),
+                  var(--bg);
+      color:var(--text);
+      line-height:1.6;
+    }
+    a{color:var(--accent); text-decoration:none}
+    a:hover{text-decoration:underline}
+
+    .wrap{max-width:980px; margin:0 auto; padding:28px 18px 70px}
+    header{
+      padding:54px 0 28px;
+      border-bottom:1px solid var(--line);
+    }
+    .kicker{
+      color:var(--muted);
+      letter-spacing:.08em;
+      text-transform:uppercase;
+      font-size:12px;
+      margin:0 0 10px;
+    }
+    h1{
+      margin:0;
+      font-size:44px;
+      letter-spacing:-.02em;
+    }
+    .sub{
+      margin:14px 0 22px;
+      color:var(--muted);
+      max-width:70ch;
+    }
+    .cta{
+      display:flex;
+      gap:12px;
+      flex-wrap:wrap;
+      margin-top:14px;
+    }
+    .btn{
+      display:inline-flex;
+      align-items:center;
+      gap:10px;
+      padding:12px 14px;
+      border-radius:999px;
+      border:1px solid var(--line);
+      background: rgba(255,255,255,.03);
+      backdrop-filter: blur(6px);
+      transition: transform .18s ease, border-color .18s ease, background .18s ease;
+    }
+    .btn:hover{
+      transform: translateY(-2px);
+      border-color: rgba(20,117,220,.55);
+      background: rgba(20,117,220,.10);
+      text-decoration:none;
+    }
+
+    section{padding:34px 0}
+    .grid{
+      display:grid;
+      grid-template-columns: 1fr 1fr;
+      gap:16px;
+    }
+    @media (max-width: 760px){
+      h1{font-size:36px}
+      .grid{grid-template-columns:1fr}
+    }
+
+    .card{
+      background: linear-gradient(180deg, rgba(255,255,255,.04), rgba(255,255,255,.02));
+      border:1px solid var(--line);
+      border-radius: var(--radius);
+      padding:18px;
+      box-shadow: var(--shadow);
+      transition: transform .18s ease, border-color .18s ease;
+      overflow:hidden;
+    }
+    .card:hover{
+      transform: translateY(-3px);
+      border-color: rgba(20,117,220,.45);
+    }
+    .tag{
+      display:inline-block;
+      padding:6px 10px;
+      border-radius:999px;
+      border:1px solid var(--line);
+      color:var(--muted);
+      font-size:12px;
+      margin-bottom:10px;
+    }
+    .title{
+      margin:0 0 8px;
+      font-size:18px;
+      letter-spacing:-.01em;
+    }
+    .desc{margin:0 0 12px; color:var(--muted)}
+    .meta{
+      display:flex;
+      gap:10px;
+      flex-wrap:wrap;
+      color:var(--muted);
+      font-size:12px;
+    }
+    .meta span{
+      border:1px solid var(--line);
+      border-radius:999px;
+      padding:6px 10px;
+      background: rgba(255,255,255,.02);
+    }
+    .shot{
+      width:100%;
+      border-radius: 12px;
+      border:1px solid var(--line);
+      margin-top:14px;
+      background:#0a0c10;
+      aspect-ratio: 16 / 9;
+      display:grid;
+      place-items:center;
+      color:rgba(255,255,255,.25);
+      font-size:12px;
+    }
+
+    .twoCol{
+      display:grid;
+      grid-template-columns: 1.2fr .8fr;
+      gap:16px;
+    }
+    @media (max-width: 900px){ .twoCol{grid-template-columns:1fr} }
+
+    .list{
+      margin:0;
+      padding-left:18px;
+      color:var(--muted);
+    }
+    .list li{margin:6px 0}
+
+    footer{
+      padding-top:30px;
+      border-top:1px solid var(--line);
+      color:var(--muted);
+      font-size:13px;
+      display:flex;
+      justify-content:space-between;
+      gap:10px;
+      flex-wrap:wrap;
+    }
+
+    /* accessibility: visible focus */
+    :focus-visible{
+      outline: 3px solid rgba(20,117,220,.75);
+      outline-offset: 3px;
+      border-radius: 10px;
+    }
+  </style>
+</head>
+<body>
+  <div class="wrap">
+    <header>
+      <p class="kicker">Web Design • Front-End • UX</p>
+      <h1>Navpreet Kaur</h1>
+      <p class="sub">
+        I design clean, responsive web experiences with strong layout, usability, and accessibility.
+        I like pixel-perfect UI, simple motion, and data-informed UX improvements.
+      </p>
+
+      <div class="cta">
+        <a class="btn" href="https://www.linkedin.com/" target="_blank" rel="noreferrer">LinkedIn</a>
+        <a class="btn" href="https://github.com/" target="_blank" rel="noreferrer">GitHub</a>
+        <a class="btn" href="mailto:knavpreet068@gmail.com">Email</a>
+      </div>
+    </header>
+
+    <section class="twoCol">
+      <div class="card">
+        <span class="tag">About</span>
+        <h2 class="title">Design mindset</h2>
+        <p class="desc">
+          I focus on layout structure, visual hierarchy, responsive behavior, and usability testing.
+          I aim for accessible UI (WCAG-aware) and consistent branding across pages.
+        </p>
+        <ul class="list">
+          <li>Responsive layouts (mobile-first) + cross-browser testing</li>
+          <li>Accessibility awareness (contrast, focus states, readable typography)</li>
+          <li>Collaboration with dev/content teams and iterative improvements</li>
+        </ul>
+      </div>
+
+      <div class="card">
+        <span class="tag">Skills</span>
+        <h2 class="title">Toolbox</h2>
+        <div class="meta">
+          <span>Figma</span><span>HTML</span><span>CSS</span><span>JavaScript</span>
+          <span>Bootstrap</span><span>UX Testing</span><span>WCAG</span><span>Git</span>
+          <span>Next.js (basic)</span><span>Headless CMS (concepts)</span>
+        </div>
+      </div>
+    </section>
+
+    <section>
+      <h2 style="margin:0 0 14px; letter-spacing:-.01em;">Selected Projects</h2>
+      <div class="grid">
+
+        <article class="card">
+          <span class="tag">Web App • UI Layout</span>
+          <h3 class="title">Flashcard Master</h3>
+          <p class="desc">Responsive layouts + consistent components + usability tweaks from feedback.</p>
+          <div class="meta">
+            <span>HTML/CSS</span><span>Bootstrap</span><span>ASP.NET MVC</span>
+          </div>
+          <div class="shot">Add screenshot: flashcard.png</div>
+          <!-- Replace the div above with:
+          <img class="shot" src="flashcard.png" alt="Flashcard Master screenshot">
+          -->
+        </article>
+
+        <article class="card">
+          <span class="tag">E-Commerce • UX Flow</span>
+          <h3 class="title">Mobile Store</h3>
+          <p class="desc">Improved navigation clarity + checkout UX + cross-browser visual consistency.</p>
+          <div class="meta">
+            <span>HTML/CSS</span><span>JavaScript</span><span>ASP.NET MVC</span>
+          </div>
+          <div class="shot">Add screenshot: mobilestore.png</div>
+        </article>
+
+        <article class="card">
+          <span class="tag">Dashboard • Motion</span>
+          <h3 class="title">Real-Time Weather Dashboard</h3>
+          <p class="desc">Clean hierarchy + responsive dashboard + subtle CSS motion for interaction.</p>
+          <div class="meta">
+            <span>HTML/CSS</span><span>JavaScript</span><span>AWS</span>
+          </div>
+          <div class="shot">Add screenshot: weather.png</div>
+        </article>
+
+        <article class="card">
+          <span class="tag">Case Study • Figma</span>
+          <h3 class="title">UX Mini Case Study (1 page)</h3>
+          <p class="desc">Problem → wireframe → redesign → quick test feedback (even from 3 friends).</p>
+          <div class="meta">
+            <span>Figma</span><span>Usability</span><span>Accessibility</span>
+          </div>
+          <div class="shot">Add screenshot: figma-case.png</div>
+        </article>
+
+      </div>
+    </section>
+
+    <footer>
+      <span>© 2026 Navpreet Kaur</span>
+      <span>Built with HTML/CSS • BlackBerry-inspired dark UI</span>
+    </footer>
+  </div>
+</body>
+</html>
